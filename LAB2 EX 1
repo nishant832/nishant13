@@ -1,0 +1,18 @@
+#include <iostream>
+#include <cmath>
+
+int multiply(int a, int b) { return a * b; }
+double multiply(double a, double b) { return a * b; }
+double multiply(int i, double d, bool f) { double r = i * d; return f ? std::ceil(r) : r; }
+
+int main() {
+    int i1 = 5, i2 = 10;
+    double d1 = 2.5, d2 = 3.7;
+
+    std::cout << "Int: " << multiply(i1, i2) << "\n";
+    std::cout << "Dbl: " << multiply(d1, d2) << "\n";
+    std::cout << "Mix(f): " << multiply(i1, d1, false) << "\n";
+    std::cout << "Mix(t-ceil): " << multiply(i1, d1, true) << "\n";
+    std::cout << "Mix(t-floor): " << std::floor(multiply(i1, d1, true)) << "\n";
+    return 0;
+}
