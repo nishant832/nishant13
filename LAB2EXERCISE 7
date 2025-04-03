@@ -1,0 +1,17 @@
+#include <iostream>
+
+int main() {
+    int x = 100;
+    int* p1 = &x;
+    int* p2 = p1;
+
+    std::cout << "Initial x: " << x << ", *p1: " << *p1 << ", *p2: " << *p2 << std::endl;
+
+    *p1 = 200;
+    std::cout << "x after *p1 = 200: " << x << ", *p1: " << *p1 << ", *p2: " << *p2 << std::endl;
+
+    *p2 = 300;
+    std::cout << "x after *p2 = 300: " << x << ", *p1: " << *p1 << ", *p2: " << *p2 << std::endl;
+
+    return 0;
+}
