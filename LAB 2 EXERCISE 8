@@ -1,0 +1,17 @@
+#include <iostream>
+
+int main() {
+    int a = 100;
+    int& refA = a; // Reference to a
+
+    std::cout << "Initial value of a: " << a << std::endl;
+    std::cout << "Value of refA: " << refA << std::endl;
+
+    refA = 30; // Modifying refA
+
+    std::cout << "\nAfter modifying refA:" << std::endl;
+    std::cout << "New value of a: " << a << std::endl;
+    std::cout << "Value of refA: " << refA << std::endl;
+
+    return 0;
+}
