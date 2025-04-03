@@ -1,0 +1,17 @@
+#include <iostream>
+
+int main() {
+    float n1, n2, r;
+    char op;
+    std::cout << "Enter num1 op num2: ";
+    std::cin >> n1 >> op >> n2;
+    switch (op) {
+        case '+': r = n1 + n2; break;
+        case '-': r = n1 - n2; break;
+        case '*': r = n1 * n2; break;
+        case '/': r = (n2 != 0) ? n1 / n2 : 0; if (n2 == 0) std::cout << "Err: Div by 0!\n"; break;
+        default: std::cout << "Err: Invalid op!\n"; return 1;
+    }
+    std::cout << n1 << " " << op << " " << n2 << " = " << r << std::endl;
+    return 0;
+}
